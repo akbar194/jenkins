@@ -1,0 +1,25 @@
+def workspace;
+node 
+{
+  stage("checkout")  
+  {
+      checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/akbar194/jenkins.git']]])
+    workspace=pwd()
+    stage("code analysis")
+    {
+        echo"code has been analysed"
+    }
+    stage("buildstate")
+    {
+        echo"code has sucessfully bulid"
+    }
+    stage("unittesting")
+    {
+        echo"unit has succesfully done"
+    }
+    stage("delivery stage")
+    {
+        echo"delivered has ben sucessful"
+    }
+  }
+}
