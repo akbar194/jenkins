@@ -1,24 +1,5 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@akbar194 
-jfrog
-/
-project-examples
-102
-6441.4k
- Code Issues 45 Pull requests 8 Actions Projects 0 Wiki Security Insights
-project-examples/jenkins-examples/pipeline-examples/declarative-examples/maven-example/Jenkinsfile
-@yahavi yahavi Add Jenkins Declarative pipeline examples
-c92da48 on Jan 1, 2019
-54 lines (49 sloc)  1.52 KB
-  
-pipeline {
+  pipeline {
     agent any
     stages {
         stage ('Clone') {
